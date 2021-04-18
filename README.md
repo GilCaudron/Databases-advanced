@@ -24,7 +24,7 @@
 
 
 
-## Uitleg werking scraper:
+## Desciption use scraper:
 1. I sent a get request to https://www.blockchain.com/btc/unconfirmed-transactions via the request package.
 2. I created a beautifulsoup item with the answer from the get request in it. Via beautifulsoup this html page will be easier to read.
 3. Afterwards I use the soup.find method to get the 'class' from the html where the full data (Hash,Time,Amount (BTC), Amount (USD)) about the bitcoin tranactions is located.
