@@ -1,0 +1,26 @@
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt install docker-ce
+sudo systemctl status docker
+
+
+sudo groupadd docker
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
+docker run hello-world
+
+docker pull redis
+
+docker run -d -p 9000:6379 --name redis2 redis
+
+docker exec -it redis2 sh
+
+docker pull mongo
+
+docker run -d -p 9000:6379 --name mongo2 redis
+
+docker exec -it mongo2 sh
+
